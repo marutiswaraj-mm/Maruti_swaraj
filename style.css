@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    background: #fff8ef;
+    color: #3d1b00;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 6%;
+
+    background: #8b1e00;
+    color: white;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo span {
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+.menu-btn {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* ================= HOME / HERO ================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle at top, #ffcf70, #ff8c00 45%, #8b1e00 100%);
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.ganesh-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.small-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    margin: 15px 0;
+
+    font-size: clamp(35px, 7vw, 70px);
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 22px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #ff6b00;
+    color: white;
+}
+
+.primary:hover {
+    background: #e65300;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: white;
+    color: #8b1e00;
+}
+
+.secondary:hover {
+    background: #ffe8c2;
+    transform: translateY(-2px);
+}
+
+
+/* ================= GENERAL SECTION ================= */
+
+.section {
+    padding: 70px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    display: block;
+    font-size: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin: 5px 0;
+
+    color: #8b1e00;
+}
+
+.section-title p {
+    color: #795548;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-card {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+.about-card h3 {
+    color: #8b1e00;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.about-details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.about-details div {
+    padding: 18px;
+
+    background: #fff1d6;
+
+    border-radius: 15px;
+}
+
+.about-details strong,
+.about-details span {
+    display: block;
+}
+
+.about-details strong {
+    color: #8b1e00;
+}
+
+
+/* ================= PROGRAMS ================= */
+
+.programs-section {
+    background: #fff0d4;
+}
+
+.program-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.program-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-7px);
+}
+
+.program-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.program-card h3 {
+    color: #8b1e00;
+
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    font-size: 15px;
+}
+
+
+/* ================= DONATION ================= */
+
+.donation-section {
+    background: #fff8ef;
+}
+
+.donation-card {
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.donation-card h3 {
+    color: #8b1e00;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.upi-id {
+    margin: 25px 0;
+
+    padding: 15px;
+
+    background: #fff1d6;
+
+    border-radius: 10px;
+
+    word-break: break-word;
+}
+
+.upi-id strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #8b1e00;
+
+    font-size: 18px;
+}
+
+.payment-btn {
+    border: none;
+
+    cursor: pointer;
+}
+
+.donation-note {
+    margin-top: 20px;
+
+    font-size: 14px;
+
+    color: #795548;
+}
+
+
+/* ================= LOCATION ================= */
+
+.location-section {
+    background: #fff0d4;
+
+    text-align: center;
+}
+
+.location-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.location-card h3 {
+    color: #8b1e00;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.location-card p {
+    margin-bottom: 25px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: #fff8ef;
+
+    text-align: center;
+}
+
+.contact-buttons {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.contact-btn {
+    display: block;
+
+    padding: 15px;
+
+    background: #8b1e00;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #ff6b00;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #5b1200;
+
+    color: white;
+}
+
+.footer-ganesh {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo span {
+        white-space: normal;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #8b1e00;
+
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 14px;
+
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 40px 15px;
+    }
+
+    .ganesh-icon {
+        font-size: 55px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .about-card {
+        padding: 25px 18px;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-card {
+        padding: 25px 18px;
+    }
+
+    .location-card {
+        padding: 25px 18px;
+    }
+
+    .contact-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .menu-btn {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .small-title {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+  }
