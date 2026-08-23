@@ -1,52 +1,182 @@
-function toggleMenu() {
-    const navMenu = document.getElementById("navMenu");
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-    navMenu.classList.toggle("active");
+function toggleMenu() {
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
 }
 
 
-/* Close mobile menu after clicking a link */
+/* =====================================================
+   CLOSE MENU AFTER CLICKING
+===================================================== */
 
-const menuLinks = document.querySelectorAll("#navMenu a");
+const menuLinks =
+    document.querySelectorAll("#navMenu a");
 
 menuLinks.forEach(function(link) {
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function() {
 
-        const navMenu = document.getElementById("navMenu");
+        const navMenu =
+            document.getElementById("navMenu");
 
-        navMenu.classList.remove("active");
+        navMenu.classList.remove("active");
 
-    });
+    });
+
+});
+
+
+/* =====================================================
+   SMOOTH SCROLL
+===================================================== */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function(event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+            if (targetId === "#") {
+                return;
+            }
+
+            const target =
+                document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        }
+    );
 
 });
 
 
-/* Smooth scrolling */
+/* =====================================================
+   COPY UPI ID
+===================================================== */
 
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+function copyUPI() {
 
-    link.addEventListener("click", function(event) {
+    const upi =
+        document.getElementById("upiText").innerText;
 
-        const targetId = this.getAttribute("href");
+    const message =
+        document.getElementById("copyMessage");
 
-        if (targetId === "#") {
-            return;
-        }
 
-        const target = document.querySelector(targetId);
+    navigator.clipboard.writeText(upi)
+        .then(function() {
 
-        if (target) {
+            message.innerText =
+                "✅ UPI ID कॉपी झाला!";
 
-            event.preventDefault();
+            setTimeout(function() {
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+                message.innerText = "";
 
-        }
+            }, 3000);
 
-    });
+        })
+        .catch(function() {
 
-});
+            message.innerText =
+                "❌ UPI ID कॉपी करता आले नाही.";
+
+        });
+
+}
+
+
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
+
+function changeLanguage(language) {
+
+    const elements =
+        document.querySelectorAll("[data-" + language + "]");
+
+
+    elements.forEach(function(element) {
+
+        element.innerText =
+            element.getAttribute(
+                "data-" + language
+            );
+
+    });
+
+
+    /* Change HTML language */
+
+    if (language === "mr") {
+
+        document.documentElement.lang = "mr";
+
+    }
+
+    else if (language === "hi") {
+
+        document.documentElement.lang = "hi";
+
+    }
+
+    else if (language === "en") {
+
+        document.documentElement.lang = "en";
+
+    }
+
+
+    /* Save selected language */
+
+    localStorage.setItem(
+        "mandalLanguage",
+        language
+    );
+
+}
+
+
+/* =====================================================
+   LOAD SAVED LANGUAGE
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        const savedLanguage =
+            localStorage.getItem(
+                "mandalLanguage"
+            );
+
+
+        if (savedLanguage) {
+
+            changeLanguage(savedLanguage);
+
+        }
+
+    }
+);
