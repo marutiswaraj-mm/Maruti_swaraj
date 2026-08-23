@@ -434,60 +434,78 @@ nav a:hover {
    GALLERY
 ===================================================== */
 
+
 .gallery-section {
     background: #fff8ef;
 }
 
 .gallery-grid {
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(auto-fit, minmax(240px, 1fr));
 
-    gap: 15px;
+    gap: 22px;
 }
 
 .gallery-card {
     background: white;
 
-    border-radius: 14px;
+    border-radius: 18px;
 
     overflow: hidden;
 
     box-shadow:
-        0 5px 18px rgba(0,0,0,0.15);
+        0 6px 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
 
     text-align: center;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
 }
 
 .gallery-card img {
     width: 100%;
 
-    height: 190px;
-
-    object-fit: cover;
+    height: 250px;
 
     display: block;
 
-    transition: 0.3s;
-}
+    object-fit: cover;
 
-.gallery-card:hover img {
-    transform: scale(1.04);
+    background: #f5f5f5;
 }
 
 .gallery-card h3 {
-    padding: 10px;
-
-    font-size: 15px;
+    padding: 15px 10px 18px;
 
     color: #8b1e00;
+
+    font-size: 18px;
 }
 
+
+/* ================= GALLERY MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .gallery-card img {
+        height: 270px;
+    }
+
+}
 
 /* =====================================================
    DONATION
