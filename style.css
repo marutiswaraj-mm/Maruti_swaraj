@@ -617,48 +617,34 @@ nav a:hover {
 
 /* QR */
 
-.qr-section {
+
+.qr-payment {
     margin-top: 25px;
-
-    padding-top: 20px;
-
-    border-top: 1px solid #ead7bd;
+    padding: 20px;
+    background: #fff1d6;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.qr-section h3 {
+.qr-payment h3 {
     color: #8b1e00;
-
-    font-size: 20px;
-
     margin-bottom: 15px;
 }
 
-.qr-code {
-    width: 280px;
-
-    max-width: 90%;
-
+.upi-qr {
     display: block;
-
-    margin: auto;
-
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
     border-radius: 10px;
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,0.15);
+    background: white;
+    padding: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.qr-section p {
-    margin-top: 15px;
-
+.qr-payment p {
     font-size: 14px;
-}
-
-.donation-note {
-    margin-top: 20px;
-
-    font-size: 14px;
-
     color: #795548;
 }
 
