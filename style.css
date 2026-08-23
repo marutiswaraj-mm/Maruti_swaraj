@@ -632,15 +632,15 @@ nav a:hover {
 }
 
 .upi-qr {
-    display: block;
-    width: 200px;
-    max-width: 50%;
+    .qr-payment img, 
+.donation-card img,
+.upi-qr img {
+    max-width: 220px;
+    width: 100%;
     height: auto;
-    margin: 15px auto;
-    border-radius: 10px;
-    background: white;
-    padding: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    display: block;
+    margin: 12px auto;
+    border-radius: 12px;
 }
 
 .qr-payment p {
