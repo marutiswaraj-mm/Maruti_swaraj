@@ -1,436 +1,927 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Official website of our Ganesh Mandal">
+    <meta name="description"
+          content="मारुति स्वराज मित्र मंडल बख्खारी - गणेशोत्सव">
 
-    <title>मारुति स्वराज मित्र मंडल बख्खारी</title>
+    <title>मारुति स्वराज मित्र मंडल बख्खारी</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
-    <div class="logo">
-        🛕
-        <span>मारुति स्वराज मित्र मंडल बख्खारी</span>
-    </div>
+    <div class="logo">
 
-    <button class="menu-btn" onclick="toggleMenu()">
-        ☰
-    </button>
+        <img src="images/bappa-logo.png"
+             alt="Mandal Logo"
+             class="logo-img">
 
-    <nav id="navMenu">
+        <span id="siteName">
+            मारुति स्वराज मित्र मंडल बख्खारी
+        </span>
 
-        <a href="#home">मुख्यपृष्ठ</a>
-        <a href="#about">आमच्याबद्दल</a>
-        <a href="#programs">कार्यक्रम</a>
-        <a href="#gallery">गॅलरी</a>
-        <a href="#donation">देणगी</a>
-        <a href="#contact">संपर्क</a>
+    </div>
 
-    </nav>
+
+    <!-- Language Buttons -->
+
+    <div class="language-buttons">
+
+        <button onclick="changeLanguage('mr')">
+            मराठी
+        </button>
+
+        <button onclick="changeLanguage('hi')">
+            हिंदी
+        </button>
+
+        <button onclick="changeLanguage('en')">
+            English
+        </button>
+
+    </div>
+
+
+    <!-- Mobile Menu -->
+
+    <button class="menu-btn"
+            type="button"
+            onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+    <nav id="navMenu">
+
+        <a href="#home" data-mr="मुख्यपृष्ठ"
+           data-hi="मुख्य पृष्ठ"
+           data-en="Home">
+            मुख्यपृष्ठ
+        </a>
+
+        <a href="#about"
+           data-mr="आमच्याबद्दल"
+           data-hi="हमारे बारे में"
+           data-en="About Us">
+            आमच्याबद्दल
+        </a>
+
+        <a href="#programs"
+           data-mr="कार्यक्रम"
+           data-hi="कार्यक्रम"
+           data-en="Programs">
+            कार्यक्रम
+        </a>
+
+        <a href="#gallery"
+           data-mr="गॅलरी"
+           data-hi="गैलरी"
+           data-en="Gallery">
+            गॅलरी
+        </a>
+
+        <a href="#donation"
+           data-mr="देणगी"
+           data-hi="दान"
+           data-en="Donation">
+            देणगी
+        </a>
+
+        <a href="#contact"
+           data-mr="संपर्क"
+           data-hi="संपर्क"
+           data-en="Contact">
+            संपर्क
+        </a>
+
+    </nav>
 
 </header>
 
 
-<!-- ================= HOME ================= -->
+
+<!-- =====================================================
+     HOME
+===================================================== -->
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="hero-content">
 
-        <div class="ganesh-icon">
-            🕉️
-        </div>
+        <img src="images/bappa-hero.png"
+             alt="Ganpati Bappa"
+             class="hero-bappa">
 
-        <p class="small-title">
-            मारुति स्वराज मित्र मंडल बख्खारी
-        </p>
 
-        <h1>
-            गणपती बाप्पा मोरया! 🙏
-        </h1>
+        <div class="hero-text">
 
-        <p>
-            मंगलमूर्ती मोरया!
-        </p>
+            <p class="small-title"
+               data-mr="मारुति स्वराज मित्र मंडल बख्खारी"
+               data-hi="मारुति स्वराज मित्र मंडल बख्खारी"
+               data-en="Maruti Swaraj Mitra Mandal Bakhkhari">
 
-        <div class="hero-buttons">
+                मारुति स्वराज मित्र मंडल बख्खारी
 
-            <a href="#programs" class="btn primary">
-                कार्यक्रम पाहा
-            </a>
+            </p>
 
-            <a href="#donation" class="btn secondary">
-                देणगी द्या
-            </a>
 
-        </div>
+            <h1
+                data-mr="गणपती बाप्पा मोरया! 🙏"
+                data-hi="गणपति बप्पा मोरया! 🙏"
+                data-en="Ganpati Bappa Morya! 🙏">
 
-    </div>
+                गणपती बाप्पा मोरया! 🙏
+
+            </h1>
+
+
+            <p
+                data-mr="मंगलमूर्ती मोरया!"
+                data-hi="मंगलमूर्ति मोरया!"
+                data-en="Mangalmurti Morya!">
+
+                मंगलमूर्ती मोरया!
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#programs"
+                   class="btn primary"
+                   data-mr="कार्यक्रम पाहा"
+                   data-hi="कार्यक्रम देखें"
+                   data-en="View Programs">
+
+                    कार्यक्रम पाहा
+
+                </a>
+
+
+                <a href="#donation"
+                   class="btn secondary"
+                   data-mr="देणगी द्या"
+                   data-hi="दान करें"
+                   data-en="Donate">
+
+                    देणगी द्या
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section id="about" class="section">
 
-    <div class="section-title">
+    <div class="section-title">
 
-        <span>🙏</span>
+        <span>🙏</span>
 
-        <h2>आमच्या मंडळाबद्दल</h2>
+        <h2
+            data-mr="आमच्या मंडळाबद्दल"
+            data-hi="हमारे मंडल के बारे में"
+            data-en="About Our Mandal">
 
-        <p>
-            आमच्या गणेश मंडळाची माहिती
-        </p>
+            आमच्या मंडळाबद्दल
 
-    </div>
+        </h2>
 
+        <p
+            data-mr="आमच्या गणेश मंडळाची माहिती"
+            data-hi="हमारे गणेश मंडल की जानकारी"
+            data-en="Information about our Ganesh Mandal">
 
-    <div class="about-card">
+            आमच्या गणेश मंडळाची माहिती
 
-        <h3>
-            मारुति स्वराज मित्र मंडल बख्खारी
-        </h3>
+        </p>
 
-        <p>
-            आमचे मंडळ गणेशोत्सव मोठ्या उत्साहाने
-            आणि भक्तिभावाने साजरा करते.
-            सामाजिक, सांस्कृतिक आणि धार्मिक
-            उपक्रमांच्या माध्यमातून समाजाला
-            एकत्र आणण्याचा आमचा प्रयत्न आहे.
-        </p>
+    </div>
 
 
-        <div class="about-details">
+    <div class="about-card">
 
-            <div>
-                <strong>स्थापना</strong>
-                <span>2018</span>
-            </div>
-
-            <div>
-                <strong>ठिकाण</strong>
-                <span>बख्खारी</span>
-            </div>
-
-            <div>
-                <strong>उद्देश</strong>
-                <span>सेवा आणि संस्कृती</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+        <h3>
+            मारुति स्वराज मित्र मंडल बख्खारी
+        </h3>
 
 
-<!-- ================= PROGRAMS ================= -->
+        <p
+            data-mr="आमचे मंडळ गणेशोत्सव मोठ्या उत्साहाने आणि भक्तिभावाने साजरा करते. सामाजिक, सांस्कृतिक आणि धार्मिक उपक्रमांच्या माध्यमातून समाजाला एकत्र आणण्याचा आमचा प्रयत्न आहे."
+            data-hi="हमारा मंडल गणेशोत्सव बड़े उत्साह और भक्तिभाव से मनाता है। सामाजिक, सांस्कृतिक और धार्मिक गतिविधियों के माध्यम से समाज को एक साथ लाने का हमारा प्रयास है।"
+            data-en="Our Mandal celebrates Ganeshotsav with great enthusiasm and devotion. We aim to bring the community together through social, cultural and religious activities.">
 
-<section id="programs" class="section programs-section">
+            आमचे मंडळ गणेशोत्सव मोठ्या उत्साहाने आणि भक्तिभावाने साजरा करते.
+            सामाजिक, सांस्कृतिक आणि धार्मिक उपक्रमांच्या माध्यमातून समाजाला
+            एकत्र आणण्याचा आमचा प्रयत्न आहे.
 
-    <div class="section-title">
-
-        <span>September 14</span>
-
-        <h2>गणेशोत्सव कार्यक्रम</h2>
-
-        <p>
-            यावर्षीचे प्रमुख कार्यक्रम
-        </p>
-
-    </div>
+        </p>
 
 
-    <div class="program-grid">
+        <div class="about-details">
+
+            <div>
+                <strong
+                    data-mr="स्थापना"
+                    data-hi="स्थापना"
+                    data-en="Established">
+
+                    स्थापना
+
+                </strong>
+
+                <span>2018</span>
+            </div>
 
 
-        <div class="program-card">
+            <div>
 
-            <div class="program-icon">
-                🛕
-            </div>
+                <strong
+                    data-mr="ठिकाण"
+                    data-hi="स्थान"
+                    data-en="Location">
 
-            <h3>गणेश स्थापना</h3>
+                    ठिकाण
 
-            <p>तारीख: 14 सप्टेंबर 2026</p>
+                </strong>
 
-            <p>वेळ: संध्याकाळी 06:00 PM</p>
+                <span>बख्खारी</span>
 
-        </div>
-
-
-        <div class="program-card">
-
-            <div class="program-icon">
-                🪔
-            </div>
-
-            <h3>महाआरती</h3>
-
-            <p>दररोज</p>
-
-            <p>वेळ: संध्याकाळी 7:00</p>
-
-        </div>
+            </div>
 
 
-        <div class="program-card">
+            <div>
 
-            <div class="program-icon">
-                🎵
-            </div>
+                <strong
+                    data-mr="उद्देश"
+                    data-hi="उद्देश्य"
+                    data-en="Purpose">
 
-            <h3>सांस्कृतिक कार्यक्रम</h3>
+                    उद्देश
 
-            <p>तारीख: आपल्या मंडळाप्रमाणे</p>
+                </strong>
 
-            <p>वेळ: रात्री 8:00</p>
+                <span
+                    data-mr="सेवा आणि संस्कृती"
+                    data-hi="सेवा और संस्कृति"
+                    data-en="Service & Culture">
 
-        </div>
+                    सेवा आणि संस्कृती
 
+                </span>
 
-        <div class="program-card">
+            </div>
 
-            <div class="program-icon">
-                🍛
-            </div>
+        </div>
 
-            <h3>महाप्रसाद</h3>
-
-            <p>तारीख: मंडळाप्रमाणे</p>
-
-            <p>वेळ: दुपारी 04:00</p>
-
-        </div>
-
-
-        <div class="program-card">
-
-            <div class="program-icon">
-                🚩
-            </div>
-
-            <h3>गणेश विसर्जन</h3>
-
-            <p>तारीख: मंडळाप्रमाणे</p>
-
-            <p>वेळ: मंडळाप्रमाणे</p>
-
-        </div>
-
-
-    </div>
+    </div>
 
 </section>
 
 
-<!-- ================= DONATION ================= -->
 
-<section id="donation" class="section donation-section">
+<!-- =====================================================
+     PROGRAMS
+===================================================== -->
 
-    <div class="section-title">
+<section id="programs"
+         class="section programs-section">
 
-        <span>💰</span>
+    <div class="section-title">
 
-        <h2>मंडळासाठी देणगी</h2>
+        <span>September 14</span>
 
-        <p>
-            आपल्या सहकार्याबद्दल धन्यवाद 🙏
-        </p>
+        <h2
+            data-mr="गणेशोत्सव कार्यक्रम"
+            data-hi="गणेशोत्सव कार्यक्रम"
+            data-en="Ganeshotsav Programs">
 
-    </div>
+            गणेशोत्सव कार्यक्रम
 
+        </h2>
 
-    <div class="donation-card">
+        <p
+            data-mr="यावर्षीचे प्रमुख कार्यक्रम"
+            data-hi="इस वर्ष के प्रमुख कार्यक्रम"
+            data-en="Major programs this year">
 
-        <h3>
-            🙏 देणगी देण्यासाठी
-        </h3>
+            यावर्षीचे प्रमुख कार्यक्रम
 
-        <p>
-            खालील UPI ID वर देणगी पाठवू शकता.
-        </p>
+        </p>
 
-
-        <div class="upi-id">
-
-            UPI ID:
-            <strong>
-                9098913862-2@axl
-            </strong>
-
-        </div>
+    </div>
 
 
-        <!-- UPI PAYMENT BUTTON -->
-
-        <a href="upi://pay?pa=9098913862-2@axl&pn=Maruti%20Swaraj%20Mitra%20Mandal&cu=INR"
-           class="btn primary payment-btn">
-
-            💳 UPI द्वारे देणगी द्या
-
-        </a>
+    <div class="program-grid">
 
 
-        <p class="donation-note">
+        <!-- Program 1 -->
 
-            कृपया पेमेंट केल्यानंतर व्यवहाराचा
-            स्क्रीनशॉट मंडळाच्या WhatsApp नंबरवर पाठवा.
+        <div class="program-card">
 
-        </p>
+            <div class="program-icon">
+                🛕
+            </div>
 
-    </div>
+            <h3
+                data-mr="गणेश स्थापना"
+                data-hi="गणेश स्थापना"
+                data-en="Ganesh Installation">
+
+                गणेश स्थापना
+
+            </h3>
+
+            <p>
+                तारीख: 14 सप्टेंबर 2026
+            </p>
+
+            <p>
+                वेळ: संध्याकाळी 06:00
+            </p>
+
+        </div>
+
+
+        <!-- Program 2 -->
+
+        <div class="program-card">
+
+            <div class="program-icon">
+                🪔
+            </div>
+
+            <h3
+                data-mr="महाआरती"
+                data-hi="महाआरती"
+                data-en="Maha Aarti">
+
+                महाआरती
+
+            </h3>
+
+            <p
+                data-mr="दररोज"
+                data-hi="प्रतिदिन"
+                data-en="Every Day">
+
+                दररोज
+
+            </p>
+
+            <p>
+                वेळ: संध्याकाळी 7:00
+            </p>
+
+        </div>
+
+
+        <!-- Program 3 -->
+
+        <div class="program-card">
+
+            <div class="program-icon">
+                🎵
+            </div>
+
+            <h3
+                data-mr="सांस्कृतिक कार्यक्रम"
+                data-hi="सांस्कृतिक कार्यक्रम"
+                data-en="Cultural Program">
+
+                सांस्कृतिक कार्यक्रम
+
+            </h3>
+
+            <p
+                data-mr="तारीख: मंडळाप्रमाणे"
+                data-hi="तारीख: मंडल के अनुसार"
+                data-en="Date: As decided by Mandal">
+
+                तारीख: मंडळाप्रमाणे
+
+            </p>
+
+            <p>
+                वेळ: रात्री 8:00
+            </p>
+
+        </div>
+
+
+        <!-- Program 4 -->
+
+        <div class="program-card">
+
+            <div class="program-icon">
+                🍛
+            </div>
+
+            <h3
+                data-mr="महाप्रसाद"
+                data-hi="महाप्रसाद"
+                data-en="Mahaprasad">
+
+                महाप्रसाद
+
+            </h3>
+
+            <p
+                data-mr="तारीख: मंडळाप्रमाणे"
+                data-hi="तारीख: मंडल के अनुसार"
+                data-en="Date: As decided by Mandal">
+
+                तारीख: मंडळाप्रमाणे
+
+            </p>
+
+            <p>
+                वेळ: दुपारी 04:00
+            </p>
+
+        </div>
+
+
+        <!-- Program 5 -->
+
+        <div class="program-card">
+
+            <div class="program-icon">
+                🚩
+            </div>
+
+            <h3
+                data-mr="गणेश विसर्जन"
+                data-hi="गणेश विसर्जन"
+                data-en="Ganesh Visarjan">
+
+                गणेश विसर्जन
+
+            </h3>
+
+            <p
+                data-mr="तारीख: मंडळाप्रमाणे"
+                data-hi="तारीख: मंडल के अनुसार"
+                data-en="Date: As decided by Mandal">
+
+                तारीख: मंडळाप्रमाणे
+
+            </p>
+
+            <p
+                data-mr="वेळ: मंडळाप्रमाणे"
+                data-hi="समय: मंडल के अनुसार"
+                data-en="Time: As decided by Mandal">
+
+                वेळ: मंडळाप्रमाणे
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ================= LOCATION ================= -->
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section id="gallery" class="section gallery-section">
+
+    <div class="section-title">
+
+        <span>📷</span>
+
+        <h2
+            data-mr="गॅलरी"
+            data-hi="गैलरी"
+            data-en="Gallery">
+
+            गॅलरी
+
+        </h2>
+
+        <p
+            data-mr="मंडळाच्या आठवणी"
+            data-hi="मंडल की यादें"
+            data-en="Memories of our Mandal">
+
+            मंडळाच्या आठवणी
+
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-card">
+
+            <img src="images/gallery1.jpg"
+                 alt="Ganesh Murti">
+
+            <h3
+                data-mr="गणेश मूर्ती"
+                data-hi="गणेश मूर्ति"
+                data-en="Ganesh Murti">
+
+                गणेश मूर्ती
+
+            </h3>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <img src="images/gallery2.jpg"
+                 alt="Ganesh Decoration">
+
+            <h3
+                data-mr="गणेश सजावट"
+                data-hi="गणेश सजावट"
+                data-en="Ganesh Decoration">
+
+                गणेश सजावट
+
+            </h3>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <img src="images/gallery3.jpg"
+                 alt="Ganesh Idol">
+
+            <h3
+                data-mr="गणेश मूर्ती"
+                data-hi="गणेश मूर्ति"
+                data-en="Ganesh Idol">
+
+                गणेश मूर्ती
+
+            </h3>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <img src="images/gallery4.jpg"
+                 alt="Mandal Program">
+
+            <h3
+                data-mr="मंडळ कार्यक्रम"
+                data-hi="मंडल कार्यक्रम"
+                data-en="Mandal Program">
+
+                मंडळ कार्यक्रम
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DONATION
+===================================================== -->
+
+<section id="donation"
+         class="section donation-section">
+
+    <div class="section-title">
+
+        <span>🙏</span>
+
+        <h2
+            data-mr="मंडळासाठी देणगी"
+            data-hi="मंडल के लिए दान"
+            data-en="Donate to Our Mandal">
+
+            मंडळासाठी देणगी
+
+        </h2>
+
+        <p
+            data-mr="आपल्या सहकार्याबद्दल धन्यवाद 🙏"
+            data-hi="आपके सहयोग के लिए धन्यवाद 🙏"
+            data-en="Thank you for your support 🙏">
+
+            आपल्या सहकार्याबद्दल धन्यवाद 🙏
+
+        </p>
+
+    </div>
+
+
+    <div class="donation-card">
+
+        <h3
+            data-mr="🙏 देणगी देण्यासाठी"
+            data-hi="🙏 दान करने के लिए"
+            data-en="🙏 Make a Donation">
+
+            🙏 देणगी देण्यासाठी
+
+        </h3>
+
+
+        <p
+            data-mr="खालील UPI ID किंवा QR Code वापरून देणगी पाठवू शकता."
+            data-hi="नीचे दिए गए UPI ID या QR Code से दान भेज सकते हैं।"
+            data-en="You can donate using the UPI ID or QR Code below.">
+
+            खालील UPI ID किंवा QR Code वापरून देणगी पाठवू शकता.
+
+        </p>
+
+
+        <!-- UPI ID -->
+
+        <div class="upi-id">
+
+            <span>UPI ID</span>
+
+            <strong id="upiText">
+                9098913862-2@axl
+            </strong>
+
+        </div>
+
+
+        <!-- Copy UPI -->
+
+        <button class="copy-btn"
+                onclick="copyUPI()">
+
+            📋 UPI ID Copy करा
+
+        </button>
+
+
+        <p id="copyMessage"
+           class="copy-message">
+
+        </p>
+
+
+        <!-- UPI PAYMENT BUTTON -->
+
+        <a href="upi://pay?pa=9098913862-2%40axl&pn=Maruti%20Swaraj%20Mitra%20Mandal&cu=INR"
+           class="btn primary payment-btn">
+
+            💳 UPI द्वारे देणगी द्या
+
+        </a>
+
+
+        <!-- QR CODE -->
+
+        <div class="qr-section">
+
+            <h3
+                data-mr="📱 QR Code स्कॅन करा"
+                data-hi="📱 QR Code स्कैन करें"
+                data-en="📱 Scan QR Code">
+
+                📱 QR Code स्कॅन करा
+
+            </h3>
+
+
+            <img src="images/qr-code.png"
+                 alt="UPI Payment QR Code"
+                 class="qr-code">
+
+
+            <p
+                data-mr="PhonePe / Google Pay / Paytm किंवा इतर UPI App वापरून QR Code स्कॅन करा."
+                data-hi="PhonePe / Google Pay / Paytm या अन्य UPI App से QR Code स्कैन करें।"
+                data-en="Scan the QR Code using PhonePe, Google Pay, Paytm or another UPI app.">
+
+                PhonePe / Google Pay / Paytm किंवा इतर UPI App वापरून QR Code स्कॅन करा.
+
+            </p>
+
+        </div>
+
+
+        <p class="donation-note"
+           data-mr="कृपया पेमेंट केल्यानंतर व्यवहाराचा स्क्रीनशॉट मंडळाच्या WhatsApp नंबरवर पाठवा."
+           data-hi="कृपया भुगतान करने के बाद लेनदेन का स्क्रीनशॉट मंडल के WhatsApp नंबर पर भेजें।"
+           data-en="After making the payment, please send the transaction screenshot to the Mandal WhatsApp number.">
+
+            कृपया पेमेंट केल्यानंतर व्यवहाराचा स्क्रीनशॉट
+            मंडळाच्या WhatsApp नंबरवर पाठवा.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOCATION
+===================================================== -->
 
 <section class="section location-section">
 
-    <div class="section-title">
+    <div class="section-title">
 
-        <span>📍</span>
+        <span>📍</span>
 
-        <h2>मंडळाचे ठिकाण</h2>
+        <h2
+            data-mr="मंडळाचे ठिकाण"
+            data-hi="मंडल का स्थान"
+            data-en="Mandal Location">
 
-    </div>
+            मंडळाचे ठिकाण
 
-    <div class="location-card">
+        </h2>
 
-        <h3>
-            📍 आमचा पत्ता
-        </h3>
+    </div>
 
-        <p>
-            बख्खारी, ता. बुरहानपूर,
+
+    <div class="location-card">
+
+        <h3>
+            📍 बख्खारी
+        </h3>
+
+        <p>
+            बख्खारी, ता. बुरहानपूर,
             जि. बुरहानपूर, मध्य प्रदेश
-        </p>
-
-        <!-- GOOGLE MAP -->
-
-        <a href="https://www.google.com/maps/search/?api=1&query=Bakhari%2C%20Burhanpur%2C%20Madhya%20Pradesh%20450445"
-           target="_blank"
-           class="btn primary">
-
-            📍 Google Maps वर मार्ग पहा
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="section contact-section">
-
-    <div class="section-title">
-
-        <span>📞</span>
-
-        <h2>आमच्याशी संपर्क साधा</h2>
-
-    </div>
+        </p>
 
 
-    <div class="contact-buttons">
+        <a href="https://www.google.com/maps/search/?api=1&query=Bakhari%2C%20Burhanpur%2C%20Madhya%20Pradesh%20450445"
+           target="_blank"
+           rel="noopener"
+           class="btn primary">
 
+            📍 Google Maps वर मार्ग पहा
 
-        <!-- CALL -->
+        </a>
 
-        <a href="tel:+919098913862"
-           class="contact-btn">
-
-            📞 9098913862 वर कॉल करा
-
-        </a>
-
-
-        <!-- WHATSAPP -->
-
-        <a href="https://wa.me/919098913862"
-           target="_blank"
-           class="contact-btn">
-
-            💬 WhatsApp करा
-
-        </a>
-
-
-        <!-- SECOND CONTACT -->
-
-        <a href="tel:+919630147562"
-           class="contact-btn">
-
-            📞 9630147562 वर कॉल करा
-
-        </a>
-
-
-        <!-- SECOND WHATSAPP -->
-
-        <a href="https://wa.me/919630147562"
-           target="_blank"
-           class="contact-btn">
-
-            💬 WhatsApp करा
-
-        </a>
-
-
-    </div>
+    </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact"
+         class="section contact-section">
+
+    <div class="section-title">
+
+        <span>📞</span>
+
+        <h2
+            data-mr="आमच्याशी संपर्क साधा"
+            data-hi="हमसे संपर्क करें"
+            data-en="Contact Us">
+
+            आमच्याशी संपर्क साधा
+
+        </h2>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+
+        <!-- Number 1 -->
+
+        <a href="tel:+919098913862"
+           class="contact-btn">
+
+            📞 9098913862 वर कॉल
+
+        </a>
+
+
+        <a href="https://wa.me/919098913862"
+           target="_blank"
+           rel="noopener"
+           class="contact-btn whatsapp">
+
+            💬 WhatsApp 9098913862
+
+        </a>
+
+
+        <!-- Number 2 -->
+
+        <a href="tel:+919630147562"
+           class="contact-btn">
+
+            📞 9630147562 वर कॉल
+
+        </a>
+
+
+        <a href="https://wa.me/919630147562"
+           target="_blank"
+           rel="noopener"
+           class="contact-btn whatsapp">
+
+            💬 WhatsApp 9630147562
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-    <div class="footer-ganesh">
-        🛕
-    </div>
+    <div class="footer-ganesh">
+        🛕
+    </div>
 
-    <h2>
-        गणपती बाप्पा मोरया! 🙏
-    </h2>
 
-    <p>
-        मारुति स्वराज मित्र मंडल बख्खारी
-    </p>
+    <h2>
+        गणपती बाप्पा मोरया! 🙏
+    </h2>
 
-    <p class="copyright">
-        © 2026 All Rights Reserved
-    </p>
+
+    <p>
+        मारुति स्वराज मित्र मंडल बख्खारी
+    </p>
+
+
+    <p class="copyright">
+        © 2026 All Rights Reserved
+    </p>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- JavaScript -->
 
 <script src="script.js"></script>
 
 </body>
-                          </html>
+             </html>
