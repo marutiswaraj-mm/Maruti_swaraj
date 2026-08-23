@@ -633,8 +633,8 @@ nav a:hover {
 
 .upi-qr {
     display: block;
-    width: 280px;
-    max-width: 100%;
+    width: 200px;
+    max-width: 50%;
     height: auto;
     margin: 15px auto;
     border-radius: 10px;
