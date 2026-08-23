@@ -617,37 +617,29 @@ nav a:hover {
 
 /* QR */
 
-
-.qr-payment {
+.qr-section {
     margin-top: 25px;
-    padding: 20px;
-    background: #fff1d6;
-    border-radius: 15px;
-    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ead7bd;
 }
 
-.qr-payment h3 {
+.qr-section h3 {
     color: #8b1e00;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
-.upi-qr {
-    .qr-payment img, 
-.donation-card img,
-.upi-qr img {
-    max-width: 220px;
+.qr-code {
     width: 100%;
-    height: 100px;
+    max-width: 280px;
+    height: 190px;
+    object-fit: contain;
+    background: #ffffff;
     display: block;
-    margin: 12px auto;
-    border-radius: 12px;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
 }
-
-.qr-payment p {
-    font-size: 14px;
-    color: #795548;
-}
-
 
 /* =====================================================
    LOCATION
